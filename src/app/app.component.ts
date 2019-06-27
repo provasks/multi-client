@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'multi-client';
+  page: any = {
+    title: 'home',
+    dateTime: new Date()
+  };
+
+  constructor(public translator: TranslationService) {
+    debugger;
+    this.page.title = this.translator.translate(this.page.title);
+  }
 }

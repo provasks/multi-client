@@ -10,6 +10,10 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/provasks/multi-client.git"
+  },
   "dependencies": {
     "@angular/animations": "~8.0.1",
     "@angular/common": "~8.0.1",
