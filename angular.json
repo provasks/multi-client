@@ -24,7 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/scss/netapp.scss"],
+            "styles": ["src/scss/netapp/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -35,8 +35,8 @@
                   "with": "src/environments/lenovo/environment.ts"
                 },
                 {
-                  "replace": "src/scss/netapp.scss",
-                  "with": "src/scss/lenovo.scss"
+                  "replace": "src/scss/netapp/styles.scss",
+                  "with": "src/scss/lenovo/styles.scss"
                 }
               ]
             },
@@ -47,8 +47,8 @@
                   "with": "src/environments/fujitsu/environment.ts"
                 },
                 {
-                  "replace": "src/scss/netapp.scss",
-                  "with": "src/scss/fujitsu.scss"
+                  "replace": "src/scss/netapp/styles.scss",
+                  "with": "src/scss/fujitsu/styles.scss"
                 }
               ]
             },
@@ -110,7 +110,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/scss/netapp/styles.scss"],
             "scripts": []
           }
         },

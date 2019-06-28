@@ -7,7 +7,6 @@ import { settings } from 'src/settings';
 })
 export class TranslationService {
   private _currentLang: string;
-  private settings: string;
   data: any = {};
 
   public get currentLang() {
@@ -22,9 +21,9 @@ export class TranslationService {
 
   public init(client): Promise<{}> {
     const defaultPath = `assets/i18n/${this._currentLang}.json`;
-    const defaultData = this.getTranslationData(defaultPath);
+    const defaultData = this.getTranslations(defaultPath);
     const clientPath = `assets/i18n/${client}/${this._currentLang}.json`;
-    const clientData = this.getTranslationData(clientPath);
+    const clientData = this.getTranslations(clientPath);
 
     return new Promise<{}>((resolve, reject) => {
       Promise.all([defaultData, clientData]).then(values => {
@@ -38,7 +37,7 @@ export class TranslationService {
     return this.data[key] || key;
   }
 
-  getTranslationData(path: string) {
+  getTranslations(path: string) {
     return new Promise((resolve, reject) => {
       this.http.get<{}>(path).subscribe(
         data => {
