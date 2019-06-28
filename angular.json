@@ -61,7 +61,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true,
+              "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
@@ -81,11 +81,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "multi-client:build"
+            "browserTarget": "multi-client:build",
+            "port": 4202
           },
           "configurations": {
-            "netapp": {
-              "browserTarget": "multi-client:build:netapp"
+            "fujitsu": {
+              "browserTarget": "multi-client:build:fujitsu"
             },
             "lenovo": {
               "browserTarget": "multi-client:build:lenovo"

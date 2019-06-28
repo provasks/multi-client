@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { settings } from 'src/settings';
 
 @Injectable({
   providedIn: 'root'
@@ -16,23 +17,20 @@ export class TranslationService {
   // inject our translations
   constructor(private http: HttpClient) {
     var lang = navigator.language.substring(0, 2);
-    // this._currentLang = this.settings.languages.includes(lang) ? lang : 'en';
-    this._currentLang = lang || 'en';
+    this._currentLang = settings.languages.includes(lang) ? lang : 'en';
   }
 
-  public init(): Promise<{}> {
+  public init(client): Promise<{}> {
+    const defaultPath = `assets/i18n/${this._currentLang}.json`;
+    const defaultData = this.getTranslationData(defaultPath);
+    const clientPath = `assets/i18n/${client}/${this._currentLang}.json`;
+    const clientData = this.getTranslationData(clientPath);
+
     return new Promise<{}>((resolve, reject) => {
-      var langPath = `assets/i18n/${this.currentLang || 'en'}.json`;
-      this.http.get<{}>(langPath).subscribe(
-        translation => {
-          this.data = Object.assign({}, translation || {});
-          resolve(this.data);
-        },
-        error => {
-          this.data = {};
-          resolve(this.data);
-        }
-      );
+      Promise.all([defaultData, clientData]).then(values => {
+        this.data = Object.assign({}, values[0], values[1]);
+        resolve(this.data);
+      });
     });
   }
 
@@ -40,8 +38,16 @@ export class TranslationService {
     return this.data[key] || key;
   }
 
-  // public instant(key: string) {
-  //   // call translation
-  //   return this.translate(key);
-  // }
+  getTranslationData(path: string) {
+    return new Promise((resolve, reject) => {
+      this.http.get<{}>(path).subscribe(
+        data => {
+          resolve(data);
+        },
+        error => {
+          console.log(`Error in ${path} file`);
+        }
+      );
+    });
+  }
 }

@@ -13,7 +13,6 @@ export class AppComponent {
   };
 
   constructor(public translator: TranslationService) {
-    debugger;
     this.page.title = this.translator.translate(this.page.title);
   }
 }
