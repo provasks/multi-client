@@ -9,10 +9,12 @@ import { TranslationService } from './services/translation.service';
 export class AppComponent {
   page: any = {
     title: 'home',
+    logo: '',
     dateTime: new Date()
   };
 
   constructor(public translator: TranslationService) {
-    this.page.title = this.translator.translate(this.page.title);
+    // this.page.title = this.translator.translate(this.page.title);
+    this.page.logo = `assets/${this.translator.clientName}/images/logo.jpg`;
   }
 }

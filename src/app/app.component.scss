@@ -3,5 +3,5 @@
 
 header {
   color: darken($theme-color, 10%);
-  @include box(200px, 50px, lighten($theme-color, 30%));
+  // @include box(200px, 50px, lighten($theme-color, 30%));
 }

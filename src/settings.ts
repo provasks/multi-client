@@ -1,3 +1,4 @@
 export const settings = {
-  languages: ['en', 'fr']
+  languages: ['en', 'fr'],
+  defaultTranslation: 'netapp'
 };

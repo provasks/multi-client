@@ -7,10 +7,15 @@ import { settings } from 'src/settings';
 })
 export class TranslationService {
   private _currentLang: string;
+  private _clientName: string;
   data: any = {};
 
   public get currentLang() {
     return this._currentLang;
+  }
+
+  public get clientName() {
+    return this._clientName;
   }
 
   // inject our translations
@@ -20,7 +25,10 @@ export class TranslationService {
   }
 
   public init(client): Promise<{}> {
-    const defaultPath = `assets/netapp/i18n/${this._currentLang}.json`;
+    this._clientName = client;
+    const defaultPath = `assets/${settings.defaultTranslation}/i18n/${
+      this._currentLang
+    }.json`;
     const defaultData = this.getTranslations(defaultPath);
     const clientPath = `assets/${client}/i18n/${this._currentLang}.json`;
     const clientData = this.getTranslations(clientPath);
