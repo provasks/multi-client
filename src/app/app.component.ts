@@ -8,7 +8,7 @@ import { TranslationService } from './services/translation.service';
 })
 export class AppComponent {
   page: any = {
-    title: 'home',
+    title: 'title',
     logo: '',
     dateTime: new Date()
   };
