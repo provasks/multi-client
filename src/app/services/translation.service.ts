@@ -20,9 +20,9 @@ export class TranslationService {
   }
 
   public init(client): Promise<{}> {
-    const defaultPath = `assets/i18n/${this._currentLang}.json`;
+    const defaultPath = `assets/netapp/i18n/${this._currentLang}.json`;
     const defaultData = this.getTranslations(defaultPath);
-    const clientPath = `assets/i18n/${client}/${this._currentLang}.json`;
+    const clientPath = `assets/${client}/i18n/${this._currentLang}.json`;
     const clientData = this.getTranslations(clientPath);
 
     return new Promise<{}>((resolve, reject) => {

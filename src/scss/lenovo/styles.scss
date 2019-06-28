@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-@import 'variables.scss';
-@import './../mixins.scss';
+@import '../styles.scss'; /* global styles */
+@import 'variables.scss'; /* client variables */
+@import './../mixins.scss'; /* Global Mixins */
 
 body {
   color: $theme-color;

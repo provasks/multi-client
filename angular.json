@@ -24,11 +24,17 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./src/scss/netapp"]
+            },
             "styles": ["src/scss/netapp/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "lenovo": {
+              "stylePreprocessorOptions": {
+                "includePaths": ["./src/scss/lenovo"]
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -41,6 +47,9 @@
               ]
             },
             "fujitsu": {
+              "stylePreprocessorOptions": {
+                "includePaths": ["./src/scss/fujitsu"]
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

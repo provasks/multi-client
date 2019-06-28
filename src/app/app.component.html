@@ -1,6 +1,11 @@
 <ng-container class="main">
   <header>{{ page.title }}</header>
-  <div>Current dateTime: {{ page.dateTime | date: 'long' }}</div>
+  <div>
+    <a href="#" class="btn btn-green">Green Button</a>
+    <a href="#" class="btn btn-blue">Blue Button</a>
+    <a href="#" class="btn btn-yellow">Yellow Button</a>
+    <a href="#" class="btn btn-red">Red Button</a>
+  </div>
 </ng-container>
 
 <router-outlet></router-outlet>

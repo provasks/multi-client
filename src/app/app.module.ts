@@ -11,7 +11,8 @@ import { environment } from 'src/environments/environment';
 export function setupTranslateFactory(
   translator: TranslationService
 ): Function {
-  return (client: string = environment.client) => translator.init(client);
+  return (client: string = environment.client) =>
+    translator.init(client || 'netapp');
 }
 @NgModule({
   declarations: [AppComponent, TranslatePipe],

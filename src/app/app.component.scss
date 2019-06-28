@@ -1,0 +1,7 @@
+@import 'variables.scss';
+@import './../mixins.scss';
+
+header {
+  color: darken($theme-color, 10%);
+  @include box(200px, 50px, lighten($theme-color, 30%));
+}
