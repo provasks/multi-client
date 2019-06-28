@@ -27,14 +27,23 @@
             "stylePreprocessorOptions": {
               "includePaths": ["./src/scss/netapp"]
             },
-            "styles": ["src/scss/netapp/styles.scss"],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/scss/netapp/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
             "netapp": {
               "stylePreprocessorOptions": {
                 "includePaths": ["./src/scss/netapp"]
-              }
+              },
+              "fileReplacements": [
+                {
+                  "replace": "src/favicon.ico",
+                  "with": "src/assets/netapp/images/favicon.ico"
+                }
+              ]
             },
             "lenovo": {
               "stylePreprocessorOptions": {
@@ -48,6 +57,10 @@
                 {
                   "replace": "src/scss/netapp/styles.scss",
                   "with": "src/scss/lenovo/styles.scss"
+                },
+                {
+                  "replace": "src/favicon.ico",
+                  "with": "src/assets/lenovo/images/favicon.ico"
                 }
               ]
             },
@@ -63,6 +76,10 @@
                 {
                   "replace": "src/scss/netapp/styles.scss",
                   "with": "src/scss/fujitsu/styles.scss"
+                },
+                {
+                  "replace": "src/favicon.ico",
+                  "with": "src/assets/fujitsu/images/favicon.ico"
                 }
               ]
             },

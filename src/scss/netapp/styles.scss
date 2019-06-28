@@ -6,3 +6,9 @@ body {
   color: $theme-color;
   background-color: lighten($theme-color, 50%);
 }
+
+.main {
+  header {
+    background-color: $theme-color;
+  }
+}

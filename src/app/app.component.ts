@@ -15,6 +15,7 @@ export class AppComponent {
 
   constructor(public translator: TranslationService) {
     // this.page.title = this.translator.translate(this.page.title);
+    // this.page.logo = `assets/netapp/images/favicon.jpg`;
     this.page.logo = `assets/${this.translator.clientName}/images/logo.jpg`;
   }
 }
