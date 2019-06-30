@@ -3,12 +3,13 @@
 @import './../mixins.scss'; /* Global Mixins */
 
 .content {
-  background-color: lighten($theme-color, 50%);
+  background-color: lighten($theme-color, 40%);
+  // background-color: lighten($theme-color, 80%);
 }
 
 .footer,
 .header {
   .row {
-    background-color: $theme-color;
+    background-color: darken($theme-color, 10%);
   }
 }
