@@ -2,13 +2,13 @@
 @import 'variables.scss'; /* client variables */
 @import './../mixins.scss'; /* Global Mixins */
 
-body {
-  color: $theme-color;
+.content {
   background-color: lighten($theme-color, 50%);
 }
 
-.main {
-  header {
+.footer,
+.header {
+  .row {
     background-color: $theme-color;
   }
 }

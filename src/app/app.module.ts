@@ -7,6 +7,10 @@ import { TranslatePipe } from './pipes/translate.pipe';
 import { TranslationService } from './services/translation.service';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function setupTranslateFactory(
   translator: TranslationService
@@ -15,7 +19,7 @@ export function setupTranslateFactory(
     translator.init(client || 'netapp');
 }
 @NgModule({
-  declarations: [AppComponent, TranslatePipe],
+  declarations: [AppComponent, TranslatePipe, HomeComponent, NavComponent, HeaderComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     TranslationService,

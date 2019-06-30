@@ -1,0 +1,27 @@
+@import '../styles.scss'; /* global styles */
+@import 'variables.scss'; /* client variables */
+@import './../mixins.scss'; /* Global Mixins */
+
+.row {
+  display: flex;
+  align-items: center;
+  .logo {
+    text-align: center;
+    img {
+      height: 40px;
+    }
+  }
+  .title {
+    font-size: 2em;
+    color: $header-color;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+    .logo {
+      text-align: left;
+    }
+  }
+}
