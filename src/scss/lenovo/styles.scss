@@ -3,8 +3,11 @@
 @import './../mixins.scss'; /* Global Mixins */
 
 .content {
-  background-color: lighten($theme-color, 40%);
-  // background-color: lighten($theme-color, 80%);
+  background-color: lighten($theme-color, 50%);
+  .luci-button--primary:not(.luci-button--input) {
+    background-color: $theme-color;
+    border-color: $theme-color;
+  }
 }
 
 .footer,
@@ -12,4 +15,7 @@
   .row {
     background-color: darken($theme-color, 10%);
   }
+}
+.menu {
+  background-color: lighten($theme-color, 40%);
 }

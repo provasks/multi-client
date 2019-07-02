@@ -1,6 +1,271 @@
-<div>
+<!-- <div>
   <a href="#" class="btn btn-green">Green Button</a>
   <a href="#" class="btn btn-blue">Blue Button</a>
   <a href="#" class="btn btn-yellow">Yellow Button</a>
   <a href="#" class="btn btn-red">Red Button</a>
+</div> -->
+<div class="col-sm-12">
+  <button class="luci-button luci-button--primary">
+    {{ 'button' | translate }}
+  </button>
+</div>
+
+<div class="luci-table">
+  <table class="luci-table__table">
+    <thead>
+      <tr>
+        <th class=" luci-table__cell--inline-edit-icon" scope="col"></th>
+        <th class=" luci-table__cell--inline-edit-icon" scope="col"></th>
+        <th class=" luci-table__cell--inline-edit-icon" scope="col"></th>
+        <th class="" scope="col">Hostname</th>
+        <th class="" scope="col">Model</th>
+        <th class="" scope="col">Serial Number</th>
+        <th class=" luci-table__header-no-sort" scope="col">AutoSupport</th>
+        <th class=" luci-table__cell--inline-edit-button" scope="col"></th>
+        <th class=" luci-table__cell--inline-edit-button" scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-edit"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#edit"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-delete"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#delete"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-clone"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#clone"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit">Test 1</td>
+        <td class="luci-table__cell--inline-edit">FAS2554</td>
+        <td>
+          <a href="#">701517001122</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-radio">
+          <span>OFF</span> | <a href="#">Action</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-success"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#success"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-close"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#close"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-edit"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#edit"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-delete"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#delete"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-clone"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#clone"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit">Test 2</td>
+        <td class="luci-table__cell--inline-edit">FAS3170</td>
+        <td>
+          <a href="#">700000208098</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-radio">
+          <span>OFF</span> | <a href="#">Action</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-success"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#success"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-close"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#close"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-edit"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#edit"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-delete"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#delete"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-icon">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-table__action--inline-clone"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#clone"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit">Test 3</td>
+        <td class="luci-table__cell--inline-edit">FAS3170</td>
+        <td>
+          <a href="#">700000212609</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-radio">
+          <span>OFF</span> | <a href="#">Action</a>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-success"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#success"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+        <td class="luci-table__cell--inline-edit-button">
+          <button
+            class="luci-button luci-button--icon-only luci-button--flat luci-button--small luci-button--inline-edit luci-button--inline-edit-close"
+          >
+            <span class="luci-button__inner">
+              <svg
+                class="luci-icon luci-button__icon luci-button__icon--left"
+                aria-hidden="true"
+              >
+                <use xlink:href="assets/luci.svg#close"></use>
+              </svg>
+            </span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

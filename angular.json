@@ -23,15 +23,24 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/@netapp/luci/dist",
+                "output": "/assets/"
+              }
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["./src/scss/netapp"]
             },
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/@netapp/luci/dist/luci.css",
               "src/scss/netapp/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/@netapp/luci/dist/luci.js"]
           },
           "configurations": {
             "netapp": {
@@ -42,6 +51,23 @@
                 {
                   "replace": "src/favicon.ico",
                   "with": "src/assets/netapp/images/favicon.ico"
+                }
+              ],
+
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 }
               ]
             },
@@ -62,6 +88,22 @@
                   "replace": "src/favicon.ico",
                   "with": "src/assets/lenovo/images/favicon.ico"
                 }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
               ]
             },
             "fujitsu": {
@@ -80,6 +122,23 @@
                 {
                   "replace": "src/favicon.ico",
                   "with": "src/assets/fujitsu/images/favicon.ico"
+                }
+              ],
+
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 }
               ]
             },

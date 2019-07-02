@@ -4,6 +4,10 @@
 
 .content {
   background-color: lighten($theme-color, 50%);
+  .luci-button--primary:not(.luci-button--input) {
+    background-color: $theme-color;
+    border-color: $theme-color;
+  }
 }
 
 .footer,
@@ -11,4 +15,7 @@
   .row {
     background-color: $theme-color;
   }
+}
+.menu {
+  background-color: lighten($theme-color, 40%);
 }

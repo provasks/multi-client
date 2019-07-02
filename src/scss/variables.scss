@@ -1,2 +1,6 @@
 $header-color: #ffffff;
 $footer-color: #ffffff;
+$header-height: 40px;
+$footer-height: 30px;
+$content-height: calc(93.5vh - #{($header-height + $footer-height)});
+$enable-shadows: true;
